@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="X8d-pm-HAW">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Main Controller-->
+        <scene sceneID="WEj-A1-LJy">
+            <objects>
+                <viewController id="X8d-pm-HAW" customClass="MainController" customModule="pill_reminder" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="eon-oY-50p">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1xT-Uc-1Pa">
+                                <rect key="frame" x="8" y="28" width="359" height="382"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Never forget your pills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh8-aQ-al0">
+                                        <rect key="frame" x="56.5" y="0.0" width="246.5" height="95.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrY-Pl-boK">
+                                        <rect key="frame" x="159.5" y="95.5" width="40" height="95.5"/>
+                                        <state key="normal" title="purge"/>
+                                        <connections>
+                                            <action selector="purgeItems:" destination="X8d-pm-HAW" eventType="touchUpInside" id="unE-el-yBI"/>
+                                        </connections>
+                                    </button>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3sg-8a-OvT">
+                                        <rect key="frame" x="142" y="191" width="75" height="95.5"/>
+                                        <subviews>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qae-J9-XBD">
+                                                <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
+                                                <state key="normal" image="pills"/>
+                                                <connections>
+                                                    <action selector="add:" destination="X8d-pm-HAW" eventType="touchUpInside" id="USS-8H-zC9"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Pill" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7ND-qk-IdO">
+                                                <rect key="frame" x="9" y="75" width="57.5" height="20.5"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Pills" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTO-dx-UHS">
+                                        <rect key="frame" x="128" y="286.5" width="103" height="95.5"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rjL-Wj-5jv">
+                                <rect key="frame" x="0.0" y="410" width="375" height="257"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ote-cd-MjO">
+                                    <size key="itemSize" width="375" height="80"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="guz-nq-vZC" customClass="CustomCell" customModule="pill_reminder" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pills" translatesAutoresizingMaskIntoConstraints="NO" id="Ed6-rv-0bQ">
+                                                    <rect key="frame" x="8" y="8" width="64" height="64"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="64" id="giU-Lg-YNf"/>
+                                                        <constraint firstAttribute="height" constant="64" id="qg6-Lj-p68"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Mo4-5v-b8s">
+                                                    <rect key="frame" x="80" y="8" width="234" height="64"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8f-wn-XZj">
+                                                            <rect key="frame" x="0.0" y="0.0" width="36.5" height="32"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posologie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-b9-Ls1">
+                                                            <rect key="frame" x="0.0" y="32" width="75" height="32"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <nil key="textColor"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                </stackView>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xnq-6f-mBg">
+                                                    <rect key="frame" x="322" y="8" width="45" height="64"/>
+                                                    <state key="normal" title="Delete"/>
+                                                </button>
+                                            </subviews>
+                                        </view>
+                                        <constraints>
+                                            <constraint firstItem="Ed6-rv-0bQ" firstAttribute="leading" secondItem="guz-nq-vZC" secondAttribute="leading" constant="8" id="0Wr-WS-hEZ"/>
+                                            <constraint firstItem="Xnq-6f-mBg" firstAttribute="top" secondItem="guz-nq-vZC" secondAttribute="top" constant="8" id="Njc-ch-8AO"/>
+                                            <constraint firstItem="Mo4-5v-b8s" firstAttribute="top" secondItem="guz-nq-vZC" secondAttribute="top" constant="8" id="S22-EN-o6D"/>
+                                            <constraint firstAttribute="bottom" secondItem="Mo4-5v-b8s" secondAttribute="bottom" constant="8" id="TN2-dj-txX"/>
+                                            <constraint firstItem="Xnq-6f-mBg" firstAttribute="leading" secondItem="Mo4-5v-b8s" secondAttribute="trailing" constant="8" id="Z7V-mx-hn8"/>
+                                            <constraint firstItem="Ed6-rv-0bQ" firstAttribute="top" secondItem="guz-nq-vZC" secondAttribute="top" constant="8" id="aa9-Hw-fYc"/>
+                                            <constraint firstAttribute="bottom" secondItem="Xnq-6f-mBg" secondAttribute="bottom" constant="8" id="kH1-PE-Kle"/>
+                                            <constraint firstItem="Mo4-5v-b8s" firstAttribute="leading" secondItem="Ed6-rv-0bQ" secondAttribute="trailing" constant="8" id="kun-Dl-vO9"/>
+                                            <constraint firstItem="Xnq-6f-mBg" firstAttribute="centerY" secondItem="Mo4-5v-b8s" secondAttribute="centerY" id="pzg-Od-D92"/>
+                                            <constraint firstAttribute="bottom" secondItem="Ed6-rv-0bQ" secondAttribute="bottom" constant="8" id="sfH-a5-fZn"/>
+                                            <constraint firstAttribute="trailing" secondItem="Xnq-6f-mBg" secondAttribute="trailing" constant="8" id="tNN-eq-oEK"/>
+                                        </constraints>
+                                        <connections>
+                                            <outlet property="button" destination="Xnq-6f-mBg" id="HV8-Is-OPd"/>
+                                            <outlet property="pillName" destination="t8f-wn-XZj" id="fkg-ux-3VJ"/>
+                                            <outlet property="posology" destination="Mvc-b9-Ls1" id="hel-Gg-3i5"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="rjL-Wj-5jv" firstAttribute="leading" secondItem="UGu-q9-M25" secondAttribute="leading" id="0Mb-PF-pnt"/>
+                            <constraint firstItem="1xT-Uc-1Pa" firstAttribute="top" secondItem="UGu-q9-M25" secondAttribute="top" constant="8" id="RkR-HO-THy"/>
+                            <constraint firstItem="1xT-Uc-1Pa" firstAttribute="leading" secondItem="UGu-q9-M25" secondAttribute="leading" constant="8" id="cAx-qu-pHO"/>
+                            <constraint firstItem="UGu-q9-M25" firstAttribute="trailing" secondItem="1xT-Uc-1Pa" secondAttribute="trailing" constant="8" id="ivw-WO-xBI"/>
+                            <constraint firstItem="UGu-q9-M25" firstAttribute="bottom" secondItem="rjL-Wj-5jv" secondAttribute="bottom" id="pCW-h6-c18"/>
+                            <constraint firstItem="UGu-q9-M25" firstAttribute="trailing" secondItem="rjL-Wj-5jv" secondAttribute="trailing" id="sHB-LI-cfd"/>
+                            <constraint firstItem="rjL-Wj-5jv" firstAttribute="top" secondItem="1xT-Uc-1Pa" secondAttribute="bottom" id="xF7-Pi-2Ry"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UGu-q9-M25"/>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="rjL-Wj-5jv" id="Bxr-qL-7Oh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R2T-UG-WFt" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-47.200000000000003" y="128.18590704647679"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="pills" width="75" height="75"/>
+    </resources>
+</document>
