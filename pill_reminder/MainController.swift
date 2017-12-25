@@ -12,10 +12,11 @@ import CoreData
 class MainController: UIViewController{
   
   var pillItems = [Pill]()
+  var pillId:Int?
   
   @IBOutlet weak var collectionView: UICollectionView!
   
- 
+  
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -25,6 +26,10 @@ class MainController: UIViewController{
   }
   
   override func viewWillAppear(_ animated: Bool) {
+    reloadData()
+  }
+  
+  override func viewDidAppear(_ animated: Bool) {
     self.collectionView.reloadData()
   }
   
@@ -32,33 +37,19 @@ class MainController: UIViewController{
     PillController.deleteAllItems()
     reloadData()
   }
+  
   @IBAction func add(_ sender: Any) {
-    
-    let alert = UIAlertController(title: "New Pill",message: "Add a new pill", preferredStyle: .alert)
-    
-    let saveAction = UIAlertAction(title: "Save", style: .default) {
-      [unowned self] action in
-      guard let nameField = alert.textFields?.first,
-        let newPillName = nameField.text else { return }
-      guard let descField = alert.textFields?.last,
-        let newPillDesc = descField.text else { return }
-      PillController.save(newPillName, newPillDesc)
-      self.reloadData()
-    }
-    
-    let cancelAction = UIAlertAction(title: "Cancel",style: .default)
-    
-    alert.addTextField()
-    alert.addTextField()
-    alert.addAction(saveAction)
-    alert.addAction(cancelAction)
-    present(alert, animated: true)
+    let add = storyboard?.instantiateViewController(withIdentifier: "AddViewController")
+    navigationController?.pushViewController(add!,animated:true)
   }
   
   fileprivate func reloadData() {
     pillItems = PillController.loadData()
-    collectionView.reloadData()
+    collectionView?.reloadData()
   }
+  
+  
+  
 }
 
 extension MainController: UICollectionViewDelegate,UICollectionViewDataSource
@@ -69,19 +60,35 @@ extension MainController: UICollectionViewDelegate,UICollectionViewDataSource
     let pill = pillItems[indexPath.row]
     cell.pillName.text = pill.pillName
     cell.posology.text = pill.pillDescription
-    cell.button.tag = indexPath.row
-    cell.button.addTarget(self, action: #selector(deleteCurrent(sender:)), for: .touchUpInside)
+    pillId = indexPath.row
+
+    
+   
+    cell.button.addTarget(self, action: #selector(showDetail(sender:)), for: .touchUpInside)
     return cell
   }
   
   func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     return pillItems.count
+
+  }
+    @objc func showDetail( sender:UIButton){
+      guard let cell = sender.superview?.superview as? CustomCell else {
+        return // or fatalError() or whatever
+      }
+      
+    let indexPath = collectionView.indexPath(for: cell)
+    let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
+    let detailVc = storyBoard.instantiateViewController(withIdentifier: "DetailViewController") as! Detail
+
+      detailVc.pill = sendPill(indexPath: indexPath!)
+    navigationController?.pushViewController(detailVc, animated: true)
   }
   
-  @objc func deleteCurrent( sender:UIButton){
-    let indexpath = IndexPath(row: sender.tag, section: 0)
-    let pillToDelete = pillItems[indexpath.row]
-    PillController.deleteItem(pillToDelete)
-    reloadData()
+  func sendPill(indexPath: IndexPath) -> Pill
+  {
+    let pill = pillItems[indexPath.row]
+    return pill
   }
+  
 }

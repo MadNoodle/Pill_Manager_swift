@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B907DE321FEF03C0007B5764 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B907DE311FEF03C0007B5764 /* AddViewController.swift */; };
+		B907DE341FEF0D59007B5764 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B907DE331FEF0D59007B5764 /* Detail.swift */; };
 		B90CC3B11FEAB76C00D530ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90CC3B01FEAB76C00D530ED /* Main.storyboard */; };
 		B93772A61FE2E11C00DA3CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93772A51FE2E11C00DA3CDD /* AppDelegate.swift */; };
 		B93772AE1FE2E11C00DA3CDD /* pill_reminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B93772AC1FE2E11C00DA3CDD /* pill_reminder.xcdatamodeld */; };
@@ -18,6 +20,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B907DE311FEF03C0007B5764 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
+		B907DE331FEF0D59007B5764 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
 		B90CC3B01FEAB76C00D530ED /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B93772A21FE2E11C00DA3CDD /* pill_reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pill_reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93772A51FE2E11C00DA3CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -67,6 +71,8 @@
 				B90CC3B01FEAB76C00D530ED /* Main.storyboard */,
 				B94899C01FED20F600EE8D64 /* CustomCell.swift */,
 				B95047D71FED83FA00CE4DBE /* PillController.swift */,
+				B907DE311FEF03C0007B5764 /* AddViewController.swift */,
+				B907DE331FEF0D59007B5764 /* Detail.swift */,
 			);
 			path = pill_reminder;
 			sourceTree = "<group>";
@@ -156,8 +162,10 @@
 				B93772C21FE3112100DA3CDD /* MainController.swift in Sources */,
 				B93772A61FE2E11C00DA3CDD /* AppDelegate.swift in Sources */,
 				B94899C11FED20F600EE8D64 /* CustomCell.swift in Sources */,
+				B907DE321FEF03C0007B5764 /* AddViewController.swift in Sources */,
 				B93772AE1FE2E11C00DA3CDD /* pill_reminder.xcdatamodeld in Sources */,
 				B95047D81FED83FA00CE4DBE /* PillController.swift in Sources */,
+				B907DE341FEF0D59007B5764 /* Detail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
