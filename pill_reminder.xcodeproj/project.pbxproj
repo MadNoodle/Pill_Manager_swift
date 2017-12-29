@@ -9,6 +9,10 @@
 /* Begin PBXBuildFile section */
 		B907DE321FEF03C0007B5764 /* AddViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B907DE311FEF03C0007B5764 /* AddViewController.swift */; };
 		B907DE341FEF0D59007B5764 /* Detail.swift in Sources */ = {isa = PBXBuildFile; fileRef = B907DE331FEF0D59007B5764 /* Detail.swift */; };
+		B907DE361FF2411E007B5764 /* Detail.xib in Resources */ = {isa = PBXBuildFile; fileRef = B907DE351FF2411E007B5764 /* Detail.xib */; };
+		B907DE381FF2432A007B5764 /* Add.xib in Resources */ = {isa = PBXBuildFile; fileRef = B907DE371FF2432A007B5764 /* Add.xib */; };
+		B907DE3F1FF3B988007B5764 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B907DE3E1FF3B988007B5764 /* NotificationService.swift */; };
+		B907DE501FF579D4007B5764 /* PillcontrollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B907DE4F1FF579D4007B5764 /* PillcontrollerTests.swift */; };
 		B90CC3B11FEAB76C00D530ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90CC3B01FEAB76C00D530ED /* Main.storyboard */; };
 		B93772A61FE2E11C00DA3CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93772A51FE2E11C00DA3CDD /* AppDelegate.swift */; };
 		B93772AE1FE2E11C00DA3CDD /* pill_reminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B93772AC1FE2E11C00DA3CDD /* pill_reminder.xcdatamodeld */; };
@@ -19,9 +23,25 @@
 		B95047D81FED83FA00CE4DBE /* PillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95047D71FED83FA00CE4DBE /* PillController.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		B907DE4A1FF5795C007B5764 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B937729A1FE2E11C00DA3CDD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = B93772A11FE2E11C00DA3CDD;
+			remoteInfo = pill_reminder;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		B907DE311FEF03C0007B5764 /* AddViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddViewController.swift; sourceTree = "<group>"; };
 		B907DE331FEF0D59007B5764 /* Detail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Detail.swift; sourceTree = "<group>"; };
+		B907DE351FF2411E007B5764 /* Detail.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Detail.xib; sourceTree = "<group>"; };
+		B907DE371FF2432A007B5764 /* Add.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Add.xib; sourceTree = "<group>"; };
+		B907DE3E1FF3B988007B5764 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
+		B907DE451FF5795C007B5764 /* pill_reminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pill_reminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		B907DE491FF5795C007B5764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B907DE4F1FF579D4007B5764 /* PillcontrollerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillcontrollerTests.swift; sourceTree = "<group>"; };
 		B90CC3B01FEAB76C00D530ED /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B93772A21FE2E11C00DA3CDD /* pill_reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pill_reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93772A51FE2E11C00DA3CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -35,6 +55,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		B907DE421FF5795C007B5764 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B937729F1FE2E11C00DA3CDD /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -45,10 +72,50 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B907DE391FF24399007B5764 /* Add */ = {
+			isa = PBXGroup;
+			children = (
+				B907DE371FF2432A007B5764 /* Add.xib */,
+				B907DE311FEF03C0007B5764 /* AddViewController.swift */,
+			);
+			path = Add;
+			sourceTree = "<group>";
+		};
+		B907DE3A1FF243AD007B5764 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				B907DE331FEF0D59007B5764 /* Detail.swift */,
+				B907DE351FF2411E007B5764 /* Detail.xib */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		B907DE3D1FF24434007B5764 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				B93772C01FE3112100DA3CDD /* MainController.swift */,
+				B90CC3B01FEAB76C00D530ED /* Main.storyboard */,
+				B94899C01FED20F600EE8D64 /* CustomCell.swift */,
+				B95047D71FED83FA00CE4DBE /* PillController.swift */,
+				B907DE3E1FF3B988007B5764 /* NotificationService.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		B907DE461FF5795C007B5764 /* pill_reminderTests */ = {
+			isa = PBXGroup;
+			children = (
+				B907DE491FF5795C007B5764 /* Info.plist */,
+				B907DE4F1FF579D4007B5764 /* PillcontrollerTests.swift */,
+			);
+			path = pill_reminderTests;
+			sourceTree = "<group>";
+		};
 		B93772991FE2E11C00DA3CDD = {
 			isa = PBXGroup;
 			children = (
 				B93772A41FE2E11C00DA3CDD /* pill_reminder */,
+				B907DE461FF5795C007B5764 /* pill_reminderTests */,
 				B93772A31FE2E11C00DA3CDD /* Products */,
 			);
 			sourceTree = "<group>";
@@ -57,6 +124,7 @@
 			isa = PBXGroup;
 			children = (
 				B93772A21FE2E11C00DA3CDD /* pill_reminder.app */,
+				B907DE451FF5795C007B5764 /* pill_reminderTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -64,15 +132,12 @@
 		B93772A41FE2E11C00DA3CDD /* pill_reminder */ = {
 			isa = PBXGroup;
 			children = (
+				B907DE3D1FF24434007B5764 /* Main */,
+				B907DE3A1FF243AD007B5764 /* Detail */,
+				B907DE391FF24399007B5764 /* Add */,
 				B9D426231FEACF9800189F01 /* supportingFiles */,
 				B93772B41FE2E11C00DA3CDD /* Info.plist */,
 				B93772AC1FE2E11C00DA3CDD /* pill_reminder.xcdatamodeld */,
-				B93772C01FE3112100DA3CDD /* MainController.swift */,
-				B90CC3B01FEAB76C00D530ED /* Main.storyboard */,
-				B94899C01FED20F600EE8D64 /* CustomCell.swift */,
-				B95047D71FED83FA00CE4DBE /* PillController.swift */,
-				B907DE311FEF03C0007B5764 /* AddViewController.swift */,
-				B907DE331FEF0D59007B5764 /* Detail.swift */,
 			);
 			path = pill_reminder;
 			sourceTree = "<group>";
@@ -90,6 +155,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		B907DE441FF5795C007B5764 /* pill_reminderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B907DE4C1FF5795C007B5764 /* Build configuration list for PBXNativeTarget "pill_reminderTests" */;
+			buildPhases = (
+				B907DE411FF5795C007B5764 /* Sources */,
+				B907DE421FF5795C007B5764 /* Frameworks */,
+				B907DE431FF5795C007B5764 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B907DE4B1FF5795C007B5764 /* PBXTargetDependency */,
+			);
+			name = pill_reminderTests;
+			productName = pill_reminderTests;
+			productReference = B907DE451FF5795C007B5764 /* pill_reminderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		B93772A11FE2E11C00DA3CDD /* pill_reminder */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = B93772B71FE2E11C00DA3CDD /* Build configuration list for PBXNativeTarget "pill_reminder" */;
@@ -97,6 +180,7 @@
 				B937729E1FE2E11C00DA3CDD /* Sources */,
 				B937729F1FE2E11C00DA3CDD /* Frameworks */,
 				B93772A01FE2E11C00DA3CDD /* Resources */,
+				B907DE401FF56E13007B5764 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -117,6 +201,12 @@
 				LastUpgradeCheck = 0920;
 				ORGANIZATIONNAME = "Mathieu Janneau";
 				TargetAttributes = {
+					B907DE441FF5795C007B5764 = {
+						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
+						ProvisioningStyle = Automatic;
+						TestTargetID = B93772A11FE2E11C00DA3CDD;
+					};
 					B93772A11FE2E11C00DA3CDD = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
@@ -137,24 +227,58 @@
 			projectRoot = "";
 			targets = (
 				B93772A11FE2E11C00DA3CDD /* pill_reminder */,
+				B907DE441FF5795C007B5764 /* pill_reminderTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		B907DE431FF5795C007B5764 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B93772A01FE2E11C00DA3CDD /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				B93772B31FE2E11C00DA3CDD /* LaunchScreen.storyboard in Resources */,
+				B907DE361FF2411E007B5764 /* Detail.xib in Resources */,
 				B93772B01FE2E11C00DA3CDD /* Assets.xcassets in Resources */,
 				B90CC3B11FEAB76C00D530ED /* Main.storyboard in Resources */,
+				B907DE381FF2432A007B5764 /* Add.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		B907DE401FF56E13007B5764 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\nswiftlint\nelse\necho \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		B907DE411FF5795C007B5764 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B907DE501FF579D4007B5764 /* PillcontrollerTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		B937729E1FE2E11C00DA3CDD /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -163,6 +287,7 @@
 				B93772A61FE2E11C00DA3CDD /* AppDelegate.swift in Sources */,
 				B94899C11FED20F600EE8D64 /* CustomCell.swift in Sources */,
 				B907DE321FEF03C0007B5764 /* AddViewController.swift in Sources */,
+				B907DE3F1FF3B988007B5764 /* NotificationService.swift in Sources */,
 				B93772AE1FE2E11C00DA3CDD /* pill_reminder.xcdatamodeld in Sources */,
 				B95047D81FED83FA00CE4DBE /* PillController.swift in Sources */,
 				B907DE341FEF0D59007B5764 /* Detail.swift in Sources */,
@@ -170,6 +295,14 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		B907DE4B1FF5795C007B5764 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = B93772A11FE2E11C00DA3CDD /* pill_reminder */;
+			targetProxy = B907DE4A1FF5795C007B5764 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		B93772B11FE2E11C00DA3CDD /* LaunchScreen.storyboard */ = {
@@ -183,6 +316,41 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		B907DE4D1FF5795C007B5764 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V8A9QAD896;
+				INFOPLIST_FILE = pill_reminderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mathieujanneau.pill-reminderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pill_reminder.app/pill_reminder";
+			};
+			name = Debug;
+		};
+		B907DE4E1FF5795C007B5764 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = V8A9QAD896;
+				INFOPLIST_FILE = pill_reminderTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mathieujanneau.pill-reminderTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pill_reminder.app/pill_reminder";
+			};
+			name = Release;
+		};
 		B93772B51FE2E11C00DA3CDD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -323,6 +491,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		B907DE4C1FF5795C007B5764 /* Build configuration list for PBXNativeTarget "pill_reminderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				B907DE4D1FF5795C007B5764 /* Debug */,
+				B907DE4E1FF5795C007B5764 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		B937729D1FE2E11C00DA3CDD /* Build configuration list for PBXProject "pill_reminder" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

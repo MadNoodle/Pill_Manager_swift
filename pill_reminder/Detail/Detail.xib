@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Detail" customModule="pill_reminder" customModuleProvider="target">
+            <connections>
+                <outlet property="datePicker" destination="WBg-Af-32p" id="T0V-At-3ZI"/>
+                <outlet property="name" destination="x03-Zb-oww" id="BwF-iK-NE8"/>
+                <outlet property="notificationSwitch" destination="cdR-T5-hG6" id="Llb-C6-X6j"/>
+                <outlet property="numberOfPillPerDay" destination="WOO-D9-ryJ" id="WJo-SH-2Ab"/>
+                <outlet property="posology" destination="BZN-M7-j8C" id="Udr-Oa-mgs"/>
+                <outlet property="view" destination="iN0-l3-epB" id="ErK-V4-NAr"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sBe-bD-Yhz">
+                    <rect key="frame" x="16" y="50" width="343" height="567"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom du medicament" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x03-Zb-oww">
+                            <rect key="frame" x="0.0" y="0.0" width="169" height="63"/>
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posologie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZN-M7-j8C">
+                            <rect key="frame" x="0.0" y="63" width="75" height="63"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wWm-jP-SuT">
+                            <rect key="frame" x="0.0" y="126" width="126.5" height="63"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOO-D9-ryJ">
+                                    <rect key="frame" x="0.0" y="0.0" width="20" height="63"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fois par jour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANE-Co-6fD">
+                                    <rect key="frame" x="36" y="0.0" width="90.5" height="63"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programmer un rappel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZ0-u2-01R">
+                            <rect key="frame" x="0.0" y="189" width="171.5" height="63"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="WBg-Af-32p">
+                            <rect key="frame" x="0.0" y="252" width="343" height="63"/>
+                            <date key="date" timeIntervalSinceReferenceDate="535759894.56269401">
+                                <!--2017-12-23 22:11:34 +0000-->
+                            </date>
+                        </datePicker>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxA-an-CTY">
+                            <rect key="frame" x="0.0" y="315" width="343" height="63"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hcc-tI-rfr">
+                            <rect key="frame" x="0.0" y="378" width="343" height="63"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activer rappel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHt-6T-qgv">
+                                    <rect key="frame" x="0.0" y="21.5" width="234.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cdR-T5-hG6">
+                                    <rect key="frame" x="234.5" y="16" width="110.5" height="31"/>
+                                    <connections>
+                                        <action selector="didActivateReminder:" destination="-1" eventType="valueChanged" id="CM7-6E-h5T"/>
+                                    </connections>
+                                </switch>
+                            </subviews>
+                        </stackView>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ub2-R0-QQc">
+                            <rect key="frame" x="0.0" y="441" width="343" height="63"/>
+                            <state key="normal" title="Valider"/>
+                            <connections>
+                                <action selector="didValidate:" destination="-1" eventType="touchUpInside" id="Wp7-Lo-wYL"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lg-GS-6hb">
+                            <rect key="frame" x="0.0" y="504" width="343" height="63"/>
+                            <state key="normal" title="Effacer le medicament"/>
+                            <connections>
+                                <action selector="deleteCurrentPill:" destination="-1" eventType="touchUpInside" id="r1e-fg-pKN"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="9Lg-GS-6hb" secondAttribute="trailing" id="38R-1u-MZi"/>
+                        <constraint firstAttribute="trailing" secondItem="Hcc-tI-rfr" secondAttribute="trailing" id="4vA-x5-Mi2"/>
+                        <constraint firstItem="WBg-Af-32p" firstAttribute="leading" secondItem="sBe-bD-Yhz" secondAttribute="leading" id="CJd-HT-V6O"/>
+                        <constraint firstAttribute="trailing" secondItem="Ub2-R0-QQc" secondAttribute="trailing" id="Hb8-Se-2bq"/>
+                        <constraint firstItem="Ub2-R0-QQc" firstAttribute="leading" secondItem="sBe-bD-Yhz" secondAttribute="leading" id="TSb-KT-Psg"/>
+                        <constraint firstItem="Hcc-tI-rfr" firstAttribute="leading" secondItem="sBe-bD-Yhz" secondAttribute="leading" id="f4f-Nf-ZcK"/>
+                        <constraint firstAttribute="trailing" secondItem="WBg-Af-32p" secondAttribute="trailing" id="iqE-VL-m8V"/>
+                        <constraint firstItem="9Lg-GS-6hb" firstAttribute="leading" secondItem="sBe-bD-Yhz" secondAttribute="leading" id="xF8-gz-Cby"/>
+                    </constraints>
+                </stackView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="sBe-bD-Yhz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="0Wh-V0-tam"/>
+                <constraint firstAttribute="bottom" secondItem="sBe-bD-Yhz" secondAttribute="bottom" constant="50" id="CuH-zD-mse"/>
+                <constraint firstAttribute="trailing" secondItem="sBe-bD-Yhz" secondAttribute="trailing" constant="16" id="kx6-qb-ixQ"/>
+                <constraint firstItem="sBe-bD-Yhz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="wor-eI-gzl"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+        </view>
+    </objects>
+</document>
