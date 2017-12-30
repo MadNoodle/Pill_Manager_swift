@@ -9,6 +9,17 @@
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Black.otf">
+            <string>SourceSansPro-Black</string>
+        </array>
+        <array key="SourceSansPro-Bold.otf">
+            <string>SourceSansPro-Bold</string>
+        </array>
+        <array key="SourceSansPro-Regular.otf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Detail" customModule="pill_reminder" customModuleProvider="target">
             <connections>
@@ -25,108 +36,142 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sBe-bD-Yhz">
-                    <rect key="frame" x="16" y="50" width="343" height="567"/>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="rY7-1w-zRC">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                     <subviews>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom du medicament" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x03-Zb-oww">
-                            <rect key="frame" x="0.0" y="0.0" width="169" height="63"/>
-                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posologie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZN-M7-j8C">
-                            <rect key="frame" x="0.0" y="63" width="75" height="63"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wWm-jP-SuT">
-                            <rect key="frame" x="0.0" y="126" width="126.5" height="63"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="sBe-bD-Yhz">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="597"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOO-D9-ryJ">
-                                    <rect key="frame" x="0.0" y="0.0" width="20" height="63"/>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom du medicament" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x03-Zb-oww">
+                                    <rect key="frame" x="0.0" y="0.0" width="156" height="85.5"/>
+                                    <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="17"/>
+                                    <color key="textColor" red="0.41838726399999998" green="0.41838726399999998" blue="0.41838726399999998" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posologie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BZN-M7-j8C">
+                                    <rect key="frame" x="0.0" y="85.5" width="69.5" height="85"/>
+                                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
+                                    <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="wWm-jP-SuT">
+                                    <rect key="frame" x="0.0" y="170.5" width="119.5" height="85.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nb" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WOO-D9-ryJ">
+                                            <rect key="frame" x="0.0" y="0.0" width="19" height="85.5"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
+                                            <color key="textColor" red="0.41838726399999998" green="0.41838726399999998" blue="0.41838726399999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fois par jour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANE-Co-6fD">
+                                            <rect key="frame" x="35" y="0.0" width="84.5" height="85.5"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
+                                            <color key="textColor" red="0.41838726399999998" green="0.41838726399999998" blue="0.41838726399999998" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                </stackView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programmer un rappel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZ0-u2-01R">
+                                    <rect key="frame" x="0.0" y="256" width="173.5" height="85"/>
+                                    <fontDescription key="fontDescription" name="SourceSansPro-Black" family="Source Sans Pro" pointSize="17"/>
+                                    <color key="textColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="WBg-Af-32p">
+                                    <rect key="frame" x="0.0" y="341" width="375" height="85.5"/>
+                                    <date key="date" timeIntervalSinceReferenceDate="535759894.56269401">
+                                        <!--2017-12-23 22:11:34 +0000-->
+                                    </date>
+                                </datePicker>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxA-an-CTY">
+                                    <rect key="frame" x="0.0" y="426.5" width="375" height="85"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                     <nil key="textColor"/>
                                     <nil key="highlightedColor"/>
                                 </label>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fois par jour" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ANE-Co-6fD">
-                                    <rect key="frame" x="36" y="0.0" width="90.5" height="63"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
+                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Hcc-tI-rfr">
+                                    <rect key="frame" x="0.0" y="511.5" width="375" height="85.5"/>
+                                    <subviews>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activer rappel" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHt-6T-qgv">
+                                            <rect key="frame" x="0.0" y="0.0" width="250.5" height="21.5"/>
+                                            <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
+                                            <color key="textColor" red="0.35065570470000001" green="0.35065570470000001" blue="0.35065570470000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <switch opaque="NO" contentMode="right" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cdR-T5-hG6">
+                                            <rect key="frame" x="250.5" y="0.0" width="126.5" height="31"/>
+                                            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                            <color key="onTintColor" red="0.023529411760000001" green="0.74509803919999995" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                            <connections>
+                                                <action selector="didActivateReminder:" destination="-1" eventType="valueChanged" id="CM7-6E-h5T"/>
+                                            </connections>
+                                        </switch>
+                                    </subviews>
+                                </stackView>
                             </subviews>
+                            <constraints>
+                                <constraint firstAttribute="trailing" secondItem="Hcc-tI-rfr" secondAttribute="trailing" id="4vA-x5-Mi2"/>
+                                <constraint firstItem="WBg-Af-32p" firstAttribute="leading" secondItem="sBe-bD-Yhz" secondAttribute="leading" id="CJd-HT-V6O"/>
+                                <constraint firstItem="Hcc-tI-rfr" firstAttribute="leading" secondItem="sBe-bD-Yhz" secondAttribute="leading" id="f4f-Nf-ZcK"/>
+                                <constraint firstAttribute="trailing" secondItem="WBg-Af-32p" secondAttribute="trailing" id="iqE-VL-m8V"/>
+                            </constraints>
                         </stackView>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Programmer un rappel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UZ0-u2-01R">
-                            <rect key="frame" x="0.0" y="189" width="171.5" height="63"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="time" minuteInterval="1" translatesAutoresizingMaskIntoConstraints="NO" id="WBg-Af-32p">
-                            <rect key="frame" x="0.0" y="252" width="343" height="63"/>
-                            <date key="date" timeIntervalSinceReferenceDate="535759894.56269401">
-                                <!--2017-12-23 22:11:34 +0000-->
-                            </date>
-                        </datePicker>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VxA-an-CTY">
-                            <rect key="frame" x="0.0" y="315" width="343" height="63"/>
-                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                            <nil key="textColor"/>
-                            <nil key="highlightedColor"/>
-                        </label>
-                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Hcc-tI-rfr">
-                            <rect key="frame" x="0.0" y="378" width="343" height="63"/>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="8Om-pb-fLY">
+                            <rect key="frame" x="0.0" y="597" width="375" height="50"/>
                             <subviews>
-                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Activer rappel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mHt-6T-qgv">
-                                    <rect key="frame" x="0.0" y="21.5" width="234.5" height="20.5"/>
-                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                    <nil key="textColor"/>
-                                    <nil key="highlightedColor"/>
-                                </label>
-                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="cdR-T5-hG6">
-                                    <rect key="frame" x="234.5" y="16" width="110.5" height="31"/>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ub2-R0-QQc">
+                                    <rect key="frame" x="0.0" y="1" width="187.5" height="48"/>
+                                    <color key="backgroundColor" red="0.023529411760000001" green="0.74509803919999995" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="i6p-4u-eK6"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
+                                    <state key="normal" title="Valider">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
                                     <connections>
-                                        <action selector="didActivateReminder:" destination="-1" eventType="valueChanged" id="CM7-6E-h5T"/>
+                                        <action selector="didValidate:" destination="-1" eventType="touchUpInside" id="Wp7-Lo-wYL"/>
                                     </connections>
-                                </switch>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lg-GS-6hb">
+                                    <rect key="frame" x="187.5" y="1" width="187.5" height="48"/>
+                                    <color key="backgroundColor" red="0.023529411760000001" green="0.74509803919999995" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="48" id="l3l-tJ-kvW"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="17"/>
+                                    <state key="normal" title="Effacer le medicament">
+                                        <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="deleteCurrentPill:" destination="-1" eventType="touchUpInside" id="r1e-fg-pKN"/>
+                                    </connections>
+                                </button>
                             </subviews>
+                            <color key="backgroundColor" red="0.023529411760000001" green="0.74509803919999995" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="naz-o7-vkT"/>
+                            </constraints>
                         </stackView>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ub2-R0-QQc">
-                            <rect key="frame" x="0.0" y="441" width="343" height="63"/>
-                            <state key="normal" title="Valider"/>
-                            <connections>
-                                <action selector="didValidate:" destination="-1" eventType="touchUpInside" id="Wp7-Lo-wYL"/>
-                            </connections>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Lg-GS-6hb">
-                            <rect key="frame" x="0.0" y="504" width="343" height="63"/>
-                            <state key="normal" title="Effacer le medicament"/>
-                            <connections>
-                                <action selector="deleteCurrentPill:" destination="-1" eventType="touchUpInside" id="r1e-fg-pKN"/>
-                            </connections>
-                        </button>
                     </subviews>
                     <constraints>
-                        <constraint firstAttribute="trailing" secondItem="9Lg-GS-6hb" secondAttribute="trailing" id="38R-1u-MZi"/>
-                        <constraint firstAttribute="trailing" secondItem="Hcc-tI-rfr" secondAttribute="trailing" id="4vA-x5-Mi2"/>
-                        <constraint firstItem="WBg-Af-32p" firstAttribute="leading" secondItem="sBe-bD-Yhz" secondAttribute="leading" id="CJd-HT-V6O"/>
-                        <constraint firstAttribute="trailing" secondItem="Ub2-R0-QQc" secondAttribute="trailing" id="Hb8-Se-2bq"/>
-                        <constraint firstItem="Ub2-R0-QQc" firstAttribute="leading" secondItem="sBe-bD-Yhz" secondAttribute="leading" id="TSb-KT-Psg"/>
-                        <constraint firstItem="Hcc-tI-rfr" firstAttribute="leading" secondItem="sBe-bD-Yhz" secondAttribute="leading" id="f4f-Nf-ZcK"/>
-                        <constraint firstAttribute="trailing" secondItem="WBg-Af-32p" secondAttribute="trailing" id="iqE-VL-m8V"/>
-                        <constraint firstItem="9Lg-GS-6hb" firstAttribute="leading" secondItem="sBe-bD-Yhz" secondAttribute="leading" id="xF8-gz-Cby"/>
+                        <constraint firstItem="sBe-bD-Yhz" firstAttribute="leading" secondItem="rY7-1w-zRC" secondAttribute="leading" constant="20" id="1KA-UJ-B0Z"/>
+                        <constraint firstAttribute="trailing" secondItem="8Om-pb-fLY" secondAttribute="trailing" id="271-BL-gqw"/>
+                        <constraint firstAttribute="trailing" secondItem="sBe-bD-Yhz" secondAttribute="trailing" constant="20" id="8RF-iZ-S1C"/>
+                        <constraint firstAttribute="bottom" secondItem="8Om-pb-fLY" secondAttribute="bottom" id="CJa-Lk-46g"/>
+                        <constraint firstItem="8Om-pb-fLY" firstAttribute="leading" secondItem="rY7-1w-zRC" secondAttribute="leading" id="uIB-Cf-R25"/>
                     </constraints>
                 </stackView>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
-                <constraint firstItem="sBe-bD-Yhz" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="16" id="0Wh-V0-tam"/>
-                <constraint firstAttribute="bottom" secondItem="sBe-bD-Yhz" secondAttribute="bottom" constant="50" id="CuH-zD-mse"/>
-                <constraint firstAttribute="trailing" secondItem="sBe-bD-Yhz" secondAttribute="trailing" constant="16" id="kx6-qb-ixQ"/>
-                <constraint firstItem="sBe-bD-Yhz" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="50" id="wor-eI-gzl"/>
+                <constraint firstItem="rY7-1w-zRC" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="CzC-Fr-jTm"/>
+                <constraint firstAttribute="trailing" secondItem="rY7-1w-zRC" secondAttribute="trailing" id="Db1-z2-Yi0"/>
+                <constraint firstItem="rY7-1w-zRC" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="ggU-Gw-icu"/>
+                <constraint firstAttribute="bottom" secondItem="rY7-1w-zRC" secondAttribute="bottom" id="kYS-Kw-nku"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="29" y="-21"/>
         </view>
     </objects>
 </document>

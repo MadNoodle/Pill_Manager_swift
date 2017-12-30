@@ -13,30 +13,29 @@
         <!--View Controller-->
         <scene sceneID="EHf-IW-A2E">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <viewController id="01J-lp-oVM" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SB3-ua-Zbu">
-                                <rect key="frame" x="150" y="296" width="75" height="75"/>
-                                <state key="normal" image="pills"/>
-                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bluePill" translatesAutoresizingMaskIntoConstraints="NO" id="XqL-0N-m4y">
+                                <rect key="frame" x="150" y="296" width="74" height="74"/>
+                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="backgroundColor" red="0.023529411760000001" green="0.74509803919999995" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="SB3-ua-Zbu" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="90M-0x-DGV"/>
-                            <constraint firstItem="SB3-ua-Zbu" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="Osk-MA-cif"/>
+                            <constraint firstItem="XqL-0N-m4y" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="aFc-kL-db9"/>
+                            <constraint firstItem="XqL-0N-m4y" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="jb6-Gx-Nbp"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
     <resources>
-        <image name="pills" width="75" height="75"/>
+        <image name="bluePill" width="74" height="74"/>
     </resources>
 </document>

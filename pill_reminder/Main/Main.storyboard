@@ -6,11 +6,20 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="SourceSansPro-Bold.otf">
+            <string>SourceSansPro-Bold</string>
+        </array>
+        <array key="SourceSansPro-Regular.otf">
+            <string>SourceSansPro-Regular</string>
+        </array>
+    </customFonts>
     <scenes>
-        <!--Main Controller-->
+        <!--Never forget your pills-->
         <scene sceneID="WEj-A1-LJy">
             <objects>
                 <viewController id="X8d-pm-HAW" customClass="MainController" customModule="pill_reminder" customModuleProvider="target" sceneMemberID="viewController">
@@ -19,93 +28,94 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="1xT-Uc-1Pa">
-                                <rect key="frame" x="8" y="72" width="359" height="150"/>
+                                <rect key="frame" x="8" y="72" width="359" height="100"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Never forget your pills" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dh8-aQ-al0">
-                                        <rect key="frame" x="56.5" y="0.0" width="246.5" height="50"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrY-Pl-boK">
-                                        <rect key="frame" x="159.5" y="50" width="40" height="50"/>
-                                        <state key="normal" title="purge"/>
+                                        <rect key="frame" x="157" y="0.0" width="45" height="50"/>
+                                        <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="17"/>
+                                        <state key="normal" title="Purge">
+                                            <color key="titleColor" red="0.023529411760000001" green="0.74509803919999995" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
                                         <connections>
                                             <action selector="purgeItems:" destination="X8d-pm-HAW" eventType="touchUpInside" id="unE-el-yBI"/>
                                         </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="3sg-8a-OvT">
-                                        <rect key="frame" x="151" y="100" width="57.5" height="50"/>
+                                        <rect key="frame" x="151" y="50" width="57.5" height="50"/>
                                     </stackView>
                                 </subviews>
                             </stackView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="rjL-Wj-5jv">
-                                <rect key="frame" x="0.0" y="222" width="375" height="445"/>
+                                <rect key="frame" x="0.0" y="114" width="375" height="553"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ote-cd-MjO">
-                                    <size key="itemSize" width="375" height="80"/>
+                                    <size key="itemSize" width="375" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="myCell" id="guz-nq-vZC" customClass="CustomCell" customModule="pill_reminder" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pills" translatesAutoresizingMaskIntoConstraints="NO" id="Ed6-rv-0bQ">
-                                                    <rect key="frame" x="8" y="8" width="64" height="64"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="64" id="giU-Lg-YNf"/>
-                                                        <constraint firstAttribute="height" constant="64" id="qg6-Lj-p68"/>
-                                                    </constraints>
-                                                </imageView>
-                                                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Mo4-5v-b8s">
-                                                    <rect key="frame" x="80" y="8" width="249" height="64"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IE5-J8-CgH">
+                                                    <rect key="frame" x="18" y="8" width="339" height="35"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8f-wn-XZj">
-                                                            <rect key="frame" x="0.0" y="0.0" width="36.5" height="32"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Posologie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-b9-Ls1">
-                                                            <rect key="frame" x="0.0" y="32" width="75" height="32"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                            <nil key="textColor"/>
-                                                            <nil key="highlightedColor"/>
-                                                        </label>
+                                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bluePill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed6-rv-0bQ">
+                                                            <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="width" constant="35" id="giU-Lg-YNf"/>
+                                                                <constraint firstAttribute="height" constant="35" id="qg6-Lj-p68"/>
+                                                            </constraints>
+                                                        </imageView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Mo4-5v-b8s">
+                                                            <rect key="frame" x="51" y="0.0" width="288" height="35"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8f-wn-XZj">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="32.5" height="17.5"/>
+                                                                    <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="15"/>
+                                                                    <color key="textColor" red="0.41838726399999998" green="0.41838726399999998" blue="0.41838726399999998" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Posologie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-b9-Ls1">
+                                                                    <rect key="frame" x="0.0" y="17.5" width="53.5" height="17.5"/>
+                                                                    <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
+                                                                    <color key="textColor" red="0.24781435730000001" green="0.24781435730000001" blue="0.24781435730000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Xnq-6f-mBg">
-                                                    <rect key="frame" x="337" y="8" width="30" height="64"/>
-                                                    <state key="normal" title="Voir"/>
+                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weU-TV-WP5">
+                                                    <rect key="frame" x="337" y="14" width="22" height="22"/>
+                                                    <color key="tintColor" red="0.023529411760000001" green="0.74509803919999995" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <state key="normal">
+                                                        <color key="titleColor" red="0.023529411760000001" green="0.74509803919999995" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
+                                                    </state>
                                                 </button>
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstItem="Ed6-rv-0bQ" firstAttribute="leading" secondItem="guz-nq-vZC" secondAttribute="leading" constant="8" id="0Wr-WS-hEZ"/>
-                                            <constraint firstItem="Xnq-6f-mBg" firstAttribute="top" secondItem="guz-nq-vZC" secondAttribute="top" constant="8" id="Njc-ch-8AO"/>
-                                            <constraint firstItem="Mo4-5v-b8s" firstAttribute="top" secondItem="guz-nq-vZC" secondAttribute="top" constant="8" id="S22-EN-o6D"/>
-                                            <constraint firstAttribute="bottom" secondItem="Mo4-5v-b8s" secondAttribute="bottom" constant="8" id="TN2-dj-txX"/>
-                                            <constraint firstItem="Xnq-6f-mBg" firstAttribute="leading" secondItem="Mo4-5v-b8s" secondAttribute="trailing" constant="8" id="Z7V-mx-hn8"/>
-                                            <constraint firstItem="Ed6-rv-0bQ" firstAttribute="top" secondItem="guz-nq-vZC" secondAttribute="top" constant="8" id="aa9-Hw-fYc"/>
-                                            <constraint firstAttribute="bottom" secondItem="Xnq-6f-mBg" secondAttribute="bottom" constant="8" id="kH1-PE-Kle"/>
-                                            <constraint firstItem="Mo4-5v-b8s" firstAttribute="leading" secondItem="Ed6-rv-0bQ" secondAttribute="trailing" constant="8" id="kun-Dl-vO9"/>
-                                            <constraint firstItem="Xnq-6f-mBg" firstAttribute="centerY" secondItem="Mo4-5v-b8s" secondAttribute="centerY" id="pzg-Od-D92"/>
-                                            <constraint firstAttribute="bottom" secondItem="Ed6-rv-0bQ" secondAttribute="bottom" constant="8" id="sfH-a5-fZn"/>
-                                            <constraint firstAttribute="trailing" secondItem="Xnq-6f-mBg" secondAttribute="trailing" constant="8" id="tNN-eq-oEK"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="weU-TV-WP5" secondAttribute="trailing" constant="8" id="6a7-Hy-Exc"/>
+                                            <constraint firstItem="IE5-J8-CgH" firstAttribute="leading" secondItem="guz-nq-vZC" secondAttribute="leadingMargin" constant="10" id="opZ-as-xJU"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="IE5-J8-CgH" secondAttribute="trailing" constant="10" id="qPo-kc-kCJ"/>
                                         </constraints>
                                         <connections>
-                                            <outlet property="button" destination="Xnq-6f-mBg" id="HV8-Is-OPd"/>
+                                            <outlet property="button" destination="weU-TV-WP5" id="ist-nJ-T4O"/>
                                             <outlet property="pillName" destination="t8f-wn-XZj" id="fkg-ux-3VJ"/>
                                             <outlet property="posology" destination="Mvc-b9-Ls1" id="hel-Gg-3i5"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="X8d-pm-HAW" id="lw3-jB-sOy"/>
+                                    <outlet property="delegate" destination="X8d-pm-HAW" id="DOI-Bx-n9V"/>
+                                </connections>
                             </collectionView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -115,13 +125,14 @@
                             <constraint firstItem="1xT-Uc-1Pa" firstAttribute="leading" secondItem="UGu-q9-M25" secondAttribute="leading" constant="8" id="cAx-qu-pHO"/>
                             <constraint firstItem="UGu-q9-M25" firstAttribute="trailing" secondItem="1xT-Uc-1Pa" secondAttribute="trailing" constant="8" id="ivw-WO-xBI"/>
                             <constraint firstItem="UGu-q9-M25" firstAttribute="bottom" secondItem="rjL-Wj-5jv" secondAttribute="bottom" id="pCW-h6-c18"/>
+                            <constraint firstItem="rjL-Wj-5jv" firstAttribute="top" secondItem="UGu-q9-M25" secondAttribute="top" constant="50" id="rbM-Nd-Rwd"/>
                             <constraint firstItem="UGu-q9-M25" firstAttribute="trailing" secondItem="rjL-Wj-5jv" secondAttribute="trailing" id="sHB-LI-cfd"/>
-                            <constraint firstItem="rjL-Wj-5jv" firstAttribute="top" secondItem="1xT-Uc-1Pa" secondAttribute="bottom" id="xF7-Pi-2Ry"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="UGu-q9-M25"/>
                     </view>
-                    <navigationItem key="navigationItem" id="87d-v1-dtD">
+                    <navigationItem key="navigationItem" title="Never forget your pills" id="87d-v1-dtD">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="wZ1-lf-hg5">
+                            <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
                                 <action selector="add:" destination="X8d-pm-HAW" id="TyI-Cq-TSg"/>
                             </connections>
@@ -143,6 +154,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="x6M-hH-LZT">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.023529411764705882" green="0.74509803921568629" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -155,6 +167,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pills" width="75" height="75"/>
+        <image name="bluePill" width="74" height="74"/>
     </resources>
 </document>

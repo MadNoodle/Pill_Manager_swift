@@ -14,23 +14,16 @@ import UserNotifications
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
+ 
+  
+
+  
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // Override point for customization after application launch.
-
-    UNUserNotificationCenter.current().requestAuthorization(
-    options: [.alert, .sound]) { (authorization: Bool, error: Error?) in
-      if !authorization { print("why") }
-      if error != nil { print(error!) }
-    }
-    let pillAction = UNNotificationAction(identifier: "takePill",
-                                          title: "Confirm you have taken your pill",
-                                          options: [])
-    let category = UNNotificationCategory(identifier: "Pill",
-                                          actions: [pillAction],
-                                          intentIdentifiers: [],
-                                          options: [])
-    UNUserNotificationCenter.current().setNotificationCategories([category])
+    // White status bar
+    UIApplication.shared.statusBarStyle = .lightContent
+    setupNavBar()
+    NotificationService.setupNotificationCenter()
     return true
   }
 
@@ -83,5 +76,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
               fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
           }
       }
+  }
+  
+  fileprivate func setupNavBar() {
+    // Initialize NavigationContoller
+    let navigationBarAppearance = UINavigationBar.appearance()
+    navigationBarAppearance.barTintColor = #colorLiteral(red: 0, green: 0.7841242552, blue: 0.7883579135, alpha: 1)
+    navigationBarAppearance.tintColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+    navigationBarAppearance.titleTextAttributes = [NSAttributedStringKey.foregroundColor: UIColor.white]
   }
 }

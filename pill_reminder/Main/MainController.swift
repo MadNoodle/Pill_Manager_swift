@@ -10,11 +10,14 @@ import UIKit
 import CoreData
 
 class MainController: UIViewController {
-
+  
+  // MARK: - PROPERTIES & OUTLETS
   var pillItems = [Pill]()
   var pillId: Int?
-
+  
   @IBOutlet weak var collectionView: UICollectionView!
+  
+  // MARK: - LIFECYCLE METHODS
   override func viewDidLoad() {
     super.viewDidLoad()
     collectionView.delegate = self
@@ -30,6 +33,7 @@ class MainController: UIViewController {
     self.collectionView.reloadData()
   }
 
+  // MARK: - ACTIONS
   @IBAction func purgeItems(_ sender: Any) {
     PillController.deleteAllItems()
     reloadData()
@@ -47,31 +51,3 @@ class MainController: UIViewController {
 
 }
 
-extension MainController: UICollectionViewDelegate, UICollectionViewDataSource {
-  func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-    let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as? CustomCell
-
-    let pill = pillItems[indexPath.row]
-    cell?.pillName.text = pill.pillName
-    cell?.posology.text = pill.pillDescription
-    pillId = indexPath.row
-    cell?.button.addTarget(self, action: #selector(showDetail(sender:)), for: .touchUpInside)
-    return cell!
-  }
-
-  func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-    return pillItems.count
-
-  }
-  @objc func showDetail( sender: UIButton) {
-    guard let cell = sender.superview?.superview as? CustomCell else {
-      return
-    }
-
-    let indexPath = collectionView.indexPath(for: cell)
-    let detailVc = Detail(nibName: nil, bundle: nil)
-    detailVc.pill = PillController.sendPill(from: pillItems, at: indexPath!)
-    navigationController?.pushViewController(detailVc, animated: true)
-  }
-
-}

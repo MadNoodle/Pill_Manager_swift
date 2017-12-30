@@ -13,6 +13,9 @@ import UIKit
 struct PillController {
   static let managedObjectContext = (UIApplication.shared.delegate as? AppDelegate)?.persistentContainer.viewContext
 
+  
+
+  
   static func loadData() -> [Pill] {
     var pillItems: [Pill] = []
     let request: NSFetchRequest<Pill> = Pill.fetchRequest()

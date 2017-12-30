@@ -9,9 +9,12 @@
 import UIKit
 
 class CustomCell: UICollectionViewCell {
+
   @IBOutlet weak var pillName: UILabel!
   @IBOutlet weak var posology: UILabel!
 
   @IBOutlet weak var button: UIButton!
+  
 
+  
 }

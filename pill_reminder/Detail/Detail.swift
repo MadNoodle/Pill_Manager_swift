@@ -13,8 +13,6 @@ class Detail: UIViewController {
 
   var pill: Pill?
   var dateRemind: Date?
-  var mainController: MainController?
-  var pillId: Int?
 
   @IBOutlet weak var name: UILabel!
   @IBOutlet weak var posology: UILabel!

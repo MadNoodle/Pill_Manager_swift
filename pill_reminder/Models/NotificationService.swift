@@ -13,6 +13,22 @@ import UserNotifications
 struct NotificationService {
   static let center = UNUserNotificationCenter.current()
   
+  static func setupNotificationCenter() {
+    center.requestAuthorization(
+    options: [.alert, .sound]) { (authorization: Bool, error: Error?) in
+      if !authorization { print("why") }
+      if error != nil { print(error!) }
+    }
+    let pillAction = UNNotificationAction(identifier: "takePill",
+                                          title: "Confirm you have taken your pill",
+                                          options: [])
+    let category = UNNotificationCategory(identifier: "Pill",
+                                          actions: [pillAction],
+                                          intentIdentifiers: [],
+                                          options: [])
+   center.setNotificationCategories([category])
+  }
+  
   static func scheduleNotification(_ identifier: String,
                                    to date: Date,
                                    pillName: String,
