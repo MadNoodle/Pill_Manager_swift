@@ -11,6 +11,8 @@ import UIKit
 import CoreData
 
 extension MainController: UICollectionViewDelegate, UICollectionViewDataSource {
+  
+  //MARK: - COLLECTION VIEW DELEGATE METHODS
   func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "myCell", for: indexPath) as! CustomCell
     let pill = pillItems[indexPath.row]
@@ -25,6 +27,7 @@ extension MainController: UICollectionViewDelegate, UICollectionViewDataSource {
     return pillItems.count
   }
   
+  //MARK: - CALLBACKS
   /**
    CallBackFunction when a collectionView cell button is clicked
    */
@@ -35,7 +38,7 @@ extension MainController: UICollectionViewDelegate, UICollectionViewDataSource {
     let indexPath = collectionView.indexPath(for: cell)
     // Pass data to detail Vc for loading infos from cell
     let detailVc = Detail(nibName: "Detail", bundle: nil)
-    detailVc.pill = PillController.sendPill(from: pillItems, at: indexPath!)
+    detailVc.pill = PillManager.sendPill(from: pillItems, at: indexPath!)
     // Go to Detail Controller
     navigationController?.pushViewController(detailVc, animated: true)
     

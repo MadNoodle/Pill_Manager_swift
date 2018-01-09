@@ -34,11 +34,11 @@ class AddViewController: UIViewController {
     
     //Save Pill in Core Data
     if notificationSwitch.isOn {
-      PillController.save(newPillName, newPillDesc, newPillNumber, remind: dateToRemind, active: true )
+      PillManager.save(newPillName, newPillDesc, newPillNumber, remind: dateToRemind, active: true )
       // Create Notification if switch is on
       NotificationService.scheduleNotification(newPillName, to: dateToRemind, pillName: newPillName, pillQuantity: newPillNumber)
     } else {  
-      PillController.save(newPillName, newPillDesc, newPillNumber, remind: dateToRemind, active: false )
+      PillManager.save(newPillName, newPillDesc, newPillNumber, remind: dateToRemind, active: false )
     }
     navigationController?.popToRootViewController(animated: true)
   }

@@ -15,14 +15,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
  
-  
-
-  
   func application(_ application: UIApplication,
                    didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-    // White status bar
+    
+    // Set status bar to white font
     UIApplication.shared.statusBarStyle = .lightContent
+    // NAvbar parameters
     setupNavBar()
+    // Launch UNNotificationsCenter from Service
     NotificationService.setupNotificationCenter()
     return true
   }
@@ -70,8 +70,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
           do {
               try context.save()
           } catch {
-              // Replace this implementation with code to handle the error appropriately.
-
+              
               let nserror = error as NSError
               fatalError("Unresolved error \(nserror), \(nserror.userInfo)")
           }

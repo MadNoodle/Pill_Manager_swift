@@ -20,11 +20,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AddViewController" customModule="pill_reminder" customModuleProvider="target">
             <connections>
-                <outlet property="PillNumberField" destination="ynV-xB-8bl" id="heq-Sx-0BY"/>
                 <outlet property="datePicker" destination="xAm-P9-MWa" id="OLN-mt-XFv"/>
                 <outlet property="notificationSwitch" destination="Ied-OJ-3Vk" id="4Gv-aO-oEp"/>
                 <outlet property="pillDescField" destination="eAv-wb-SyL" id="xYd-Oy-SEC"/>
                 <outlet property="pillNameField" destination="4vb-pl-3Bs" id="sPK-Yr-1o7"/>
+                <outlet property="pillNumberField" destination="ynV-xB-8bl" id="4sK-gg-qhb"/>
                 <outlet property="view" destination="iN0-l3-epB" id="LdO-Tc-Dof"/>
             </connections>
         </placeholder>

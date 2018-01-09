@@ -31,7 +31,7 @@
                                 <rect key="frame" x="8" y="72" width="359" height="100"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NrY-Pl-boK">
-                                        <rect key="frame" x="157" y="0.0" width="45" height="50"/>
+                                        <rect key="frame" x="157.5" y="0.0" width="44" height="50"/>
                                         <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="17"/>
                                         <state key="normal" title="Purge">
                                             <color key="titleColor" red="0.023529411760000001" green="0.74509803919999995" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -63,26 +63,26 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" distribution="fillProportionally" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="IE5-J8-CgH">
-                                                    <rect key="frame" x="18" y="8" width="339" height="35"/>
+                                                    <rect key="frame" x="18" y="7" width="339" height="38"/>
                                                     <subviews>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="bluePill" translatesAutoresizingMaskIntoConstraints="NO" id="Ed6-rv-0bQ">
-                                                            <rect key="frame" x="0.0" y="0.0" width="35" height="35"/>
+                                                            <rect key="frame" x="0.0" y="1.5" width="35" height="35"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="width" constant="35" id="giU-Lg-YNf"/>
                                                                 <constraint firstAttribute="height" constant="35" id="qg6-Lj-p68"/>
                                                             </constraints>
                                                         </imageView>
                                                         <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillEqually" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="Mo4-5v-b8s">
-                                                            <rect key="frame" x="51" y="0.0" width="288" height="35"/>
+                                                            <rect key="frame" x="51" y="0.0" width="288" height="38"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Nom" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t8f-wn-XZj">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="32.5" height="17.5"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="31.5" height="19"/>
                                                                     <fontDescription key="fontDescription" name="SourceSansPro-Bold" family="Source Sans Pro" pointSize="15"/>
                                                                     <color key="textColor" red="0.41838726399999998" green="0.41838726399999998" blue="0.41838726399999998" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Posologie" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mvc-b9-Ls1">
-                                                                    <rect key="frame" x="0.0" y="17.5" width="53.5" height="17.5"/>
+                                                                    <rect key="frame" x="0.0" y="19" width="49.5" height="19"/>
                                                                     <fontDescription key="fontDescription" name="SourceSansPro-Regular" family="Source Sans Pro" pointSize="12"/>
                                                                     <color key="textColor" red="0.24781435730000001" green="0.24781435730000001" blue="0.24781435730000001" alpha="1" colorSpace="calibratedRGB"/>
                                                                     <nil key="highlightedColor"/>
@@ -91,8 +91,9 @@
                                                         </stackView>
                                                     </subviews>
                                                 </stackView>
-                                                <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weU-TV-WP5">
-                                                    <rect key="frame" x="337" y="14" width="22" height="22"/>
+                                                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="weU-TV-WP5">
+                                                    <rect key="frame" x="337" y="8" width="22" height="34"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <color key="tintColor" red="0.023529411760000001" green="0.74509803919999995" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
                                                     <state key="normal">
                                                         <color key="titleColor" red="0.023529411760000001" green="0.74509803919999995" blue="0.74117647060000003" alpha="1" colorSpace="calibratedRGB"/>
@@ -101,7 +102,6 @@
                                             </subviews>
                                         </view>
                                         <constraints>
-                                            <constraint firstAttribute="trailingMargin" secondItem="weU-TV-WP5" secondAttribute="trailing" constant="8" id="6a7-Hy-Exc"/>
                                             <constraint firstItem="IE5-J8-CgH" firstAttribute="leading" secondItem="guz-nq-vZC" secondAttribute="leadingMargin" constant="10" id="opZ-as-xJU"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="IE5-J8-CgH" secondAttribute="trailing" constant="10" id="qPo-kc-kCJ"/>
                                         </constraints>

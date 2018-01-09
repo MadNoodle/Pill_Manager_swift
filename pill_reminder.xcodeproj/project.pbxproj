@@ -12,7 +12,7 @@
 		B907DE361FF2411E007B5764 /* Detail.xib in Resources */ = {isa = PBXBuildFile; fileRef = B907DE351FF2411E007B5764 /* Detail.xib */; };
 		B907DE381FF2432A007B5764 /* Add.xib in Resources */ = {isa = PBXBuildFile; fileRef = B907DE371FF2432A007B5764 /* Add.xib */; };
 		B907DE3F1FF3B988007B5764 /* NotificationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B907DE3E1FF3B988007B5764 /* NotificationService.swift */; };
-		B907DE501FF579D4007B5764 /* PillcontrollerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B907DE4F1FF579D4007B5764 /* PillcontrollerTests.swift */; };
+		B907DE501FF579D4007B5764 /* PillManagerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B907DE4F1FF579D4007B5764 /* PillManagerTests.swift */; };
 		B90CC3B11FEAB76C00D530ED /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B90CC3B01FEAB76C00D530ED /* Main.storyboard */; };
 		B93772A61FE2E11C00DA3CDD /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93772A51FE2E11C00DA3CDD /* AppDelegate.swift */; };
 		B93772AE1FE2E11C00DA3CDD /* pill_reminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B93772AC1FE2E11C00DA3CDD /* pill_reminder.xcdatamodeld */; };
@@ -20,11 +20,12 @@
 		B93772B31FE2E11C00DA3CDD /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B93772B11FE2E11C00DA3CDD /* LaunchScreen.storyboard */; };
 		B93772C21FE3112100DA3CDD /* MainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B93772C01FE3112100DA3CDD /* MainController.swift */; };
 		B94899C11FED20F600EE8D64 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B94899C01FED20F600EE8D64 /* CustomCell.swift */; };
-		B95047D81FED83FA00CE4DBE /* PillController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95047D71FED83FA00CE4DBE /* PillController.swift */; };
+		B95047D81FED83FA00CE4DBE /* PillManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = B95047D71FED83FA00CE4DBE /* PillManager.swift */; };
 		B977FEDA1FF85B99007917E4 /* MainControllerCollectionExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B977FED91FF85B99007917E4 /* MainControllerCollectionExtensions.swift */; };
 		B9D8B2411FF6F6FF00ED0E65 /* SourceSansPro-Black.otf in Resources */ = {isa = PBXBuildFile; fileRef = B9D8B2401FF6F19B00ED0E65 /* SourceSansPro-Black.otf */; };
 		B9D8B2421FF6F70200ED0E65 /* SourceSansPro-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = B9D8B23F1FF6F18A00ED0E65 /* SourceSansPro-Bold.otf */; };
 		B9D8B2431FF6F70600ED0E65 /* SourceSansPro-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = B9D8B23E1FF6F17D00ED0E65 /* SourceSansPro-Regular.otf */; };
+		B9F715102004BDC800F1FE81 /* Detail+editing.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9F7150F2004BDC800F1FE81 /* Detail+editing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -45,7 +46,7 @@
 		B907DE3E1FF3B988007B5764 /* NotificationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationService.swift; sourceTree = "<group>"; };
 		B907DE451FF5795C007B5764 /* pill_reminderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pill_reminderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B907DE491FF5795C007B5764 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B907DE4F1FF579D4007B5764 /* PillcontrollerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillcontrollerTests.swift; sourceTree = "<group>"; };
+		B907DE4F1FF579D4007B5764 /* PillManagerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillManagerTests.swift; sourceTree = "<group>"; };
 		B90CC3B01FEAB76C00D530ED /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		B93772A21FE2E11C00DA3CDD /* pill_reminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pill_reminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B93772A51FE2E11C00DA3CDD /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -55,11 +56,12 @@
 		B93772B41FE2E11C00DA3CDD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B93772C01FE3112100DA3CDD /* MainController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainController.swift; sourceTree = "<group>"; };
 		B94899C01FED20F600EE8D64 /* CustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
-		B95047D71FED83FA00CE4DBE /* PillController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillController.swift; sourceTree = "<group>"; };
+		B95047D71FED83FA00CE4DBE /* PillManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PillManager.swift; sourceTree = "<group>"; };
 		B977FED91FF85B99007917E4 /* MainControllerCollectionExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainControllerCollectionExtensions.swift; sourceTree = "<group>"; };
 		B9D8B23E1FF6F17D00ED0E65 /* SourceSansPro-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Regular.otf"; sourceTree = "<group>"; };
 		B9D8B23F1FF6F18A00ED0E65 /* SourceSansPro-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Bold.otf"; sourceTree = "<group>"; };
 		B9D8B2401FF6F19B00ED0E65 /* SourceSansPro-Black.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SourceSansPro-Black.otf"; sourceTree = "<group>"; };
+		B9F7150F2004BDC800F1FE81 /* Detail+editing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Detail+editing.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +95,7 @@
 			isa = PBXGroup;
 			children = (
 				B907DE331FEF0D59007B5764 /* Detail.swift */,
+				B9F7150F2004BDC800F1FE81 /* Detail+editing.swift */,
 				B907DE351FF2411E007B5764 /* Detail.xib */,
 			);
 			path = Detail;
@@ -113,7 +116,7 @@
 			isa = PBXGroup;
 			children = (
 				B907DE491FF5795C007B5764 /* Info.plist */,
-				B907DE4F1FF579D4007B5764 /* PillcontrollerTests.swift */,
+				B907DE4F1FF579D4007B5764 /* PillManagerTests.swift */,
 			);
 			path = pill_reminderTests;
 			sourceTree = "<group>";
@@ -174,7 +177,7 @@
 			isa = PBXGroup;
 			children = (
 				B93772AC1FE2E11C00DA3CDD /* pill_reminder.xcdatamodeld */,
-				B95047D71FED83FA00CE4DBE /* PillController.swift */,
+				B95047D71FED83FA00CE4DBE /* PillManager.swift */,
 				B907DE3E1FF3B988007B5764 /* NotificationService.swift */,
 			);
 			path = Models;
@@ -306,7 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B907DE501FF579D4007B5764 /* PillcontrollerTests.swift in Sources */,
+				B907DE501FF579D4007B5764 /* PillManagerTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,7 +324,8 @@
 				B907DE3F1FF3B988007B5764 /* NotificationService.swift in Sources */,
 				B93772AE1FE2E11C00DA3CDD /* pill_reminder.xcdatamodeld in Sources */,
 				B977FEDA1FF85B99007917E4 /* MainControllerCollectionExtensions.swift in Sources */,
-				B95047D81FED83FA00CE4DBE /* PillController.swift in Sources */,
+				B9F715102004BDC800F1FE81 /* Detail+editing.swift in Sources */,
+				B95047D81FED83FA00CE4DBE /* PillManager.swift in Sources */,
 				B907DE341FEF0D59007B5764 /* Detail.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

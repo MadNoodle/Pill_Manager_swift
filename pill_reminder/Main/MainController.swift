@@ -35,7 +35,7 @@ class MainController: UIViewController {
 
   // MARK: - ACTIONS
   @IBAction func purgeItems(_ sender: Any) {
-    PillController.deleteAllItems()
+    PillManager.deleteAllItems()
     reloadData()
   }
 
@@ -45,7 +45,7 @@ class MainController: UIViewController {
   }
 
   fileprivate func reloadData() {
-    pillItems = PillController.loadData()
+    pillItems = PillManager.loadData()
     collectionView?.reloadData()
   }
 
